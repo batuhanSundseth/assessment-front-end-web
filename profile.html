@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<link href="styles.css" rel="stylesheet">
+
+</head>
+<body>
+	<nav>
+		<ol>
+	        <li class="crumb"><a href="./home.html">Home</a></li>
+	        <li class="crumb"><a href="./profile.html">Profile</a></li>
+	        <li class="crumb"><a href="./about.html">About</a></li>
+	    </ol>
+	</nav>
+
+<br>
+<br>
+
+<h1>Batuhan Sundseth</h1>
+
+<img src="engineer.jpg" id="profilePicture">
+<h2>Skills</h2>
+<ol class="orangeList">
+  <li>Computer builder</li>
+  <li>Fast learner</li>
+  <li>Neat & organized</li>
+</ol>
+<h2>Interests</h2>
+<ol class="blackList">
+  <li>Video games</li>
+  <li>Automation</li>
+  <li>Megastructures</li>
+</ol>
+<h2>Career Goals</h2>
+<ol class="orangeList">
+  <li>Begin software engineering</li>
+  <li>Study machine learning</li>
+  <li>Start a business</li>
+</ol>
+<form>
+  <fieldset>
+  <h2>Engineer Gaming?</h2>
+  <input type="radio" id="engineerButtonYes" name="engineer" value="">
+  <label for="engineerButtonYes">Yes</label>
+  <input type="radio" id="engineerButtonNo" name="engineer" value="">
+  <label for="engineerButtonNo">No</label>
+  <input type="submit" id="engineerSubmit">
+  </fieldset>
+  <script>
+    //Whatever works, works!
+    let engineerSubmit = document.querySelector('#engineerSubmit')
+    let engineerYes = document.querySelector('#engineerButtonYes')
+    let engineerNo = document.querySelector('#engineerButtonNo')
+    engineerYes.addEventListener('click', () => {engineerYes.value = "true"})
+    engineerNo.addEventListener('click', () => {engineerNo.value = "true"})
+    engineerSubmit.addEventListener('click', (evt) => {engineerButtonYes.value == "true" ? alert('Heck yes!') : (engineerButtonNo.value == "true" ? alert(':(') : evt.preventDefault())})
+  </script>
+</form>
+
+<br>
+
+<div class="buttonSelection">
+  <button id="color" class="button">My Favorite Color</button>
+  <button id="place" class="button">My Favorite Place</button>
+  <button id="ritual" class="button">My Favorite Ritual</button>
+</div>
+
+<a href="./home.html"><< Back </a>
+<script src="profile.js"></script>
+</body>
+</html>
